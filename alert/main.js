@@ -4,10 +4,15 @@ const convertir=(a,b) => a /b;
 let dolar= 40;
 let euro= 42;
 let real= 10;
-/*
+
 let pesos =(prompt("Ingrese el monto"));
 
 while(true){
+    if(pesos >= 100){
+
+
+
+
   let moneda =(prompt("Elige la moneda a convertir Dolar , Euro, Real"));
 switch(moneda.toLowerCase()){
 
@@ -37,13 +42,18 @@ alert(resultado3);
 
  break;
       
+} }
+else{
+
+    alert ( "monto insuficiente para convertir")
+  
 }
 
     pesos=prompt("ingrese el monto");
 }
 
 
-*/
+
 
 //consola
 
