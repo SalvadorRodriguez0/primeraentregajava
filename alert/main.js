@@ -4,7 +4,7 @@ const convertir=(a,b) => a /b;
 let dolar= 40;
 let euro= 42;
 let real= 10;
-
+/*
 let pesos =(prompt("Ingrese el monto"));
 
 while(true){
@@ -32,7 +32,7 @@ let resultado3=convertir(pesos,real);
 alert(resultado3);
     break;
     default:
-
+ 
     alert("Moneda no valida");
 
  break;
@@ -43,6 +43,13 @@ alert(resultado3);
 }
 
 
+*/
+
+//consola
+
+console.log("El euro cotiza a " + (euro));
+console.log("El dolar cotiza a " + (dolar));
+console.log("El real cotiza a "+  (real));
 
 
 
