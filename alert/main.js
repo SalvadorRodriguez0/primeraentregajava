@@ -5,6 +5,8 @@ let dolar= 40;
 let euro= 42;
 let real= 10;
 
+
+
 let pesos =(prompt("Ingrese el monto"));
 
 while(true){
@@ -45,23 +47,15 @@ alert(resultado3);
 } }
 else{
 
-    alert ( "monto insuficiente para convertir")
+    alert ( "monto insuficiente para convertir");
   
 }
 
-    pesos=prompt("ingrese el monto");
+     pesos=(prompt("ingrese el monto"));
 }
 
 
-
-
-//consola
 
 console.log("El euro cotiza a " + (euro));
 console.log("El dolar cotiza a " + (dolar));
 console.log("El real cotiza a "+  (real));
-
-
-
-
-
