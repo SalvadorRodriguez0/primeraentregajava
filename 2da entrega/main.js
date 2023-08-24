@@ -6,13 +6,11 @@ class Coches {
       this.modelo=modelo;
       this.color=color;
       this.estado=estado;
-      this.vendido = false;
+      
       
     }
-  
-    Stock() {
-      this.vendido = true;
-    }
+ 
+    
   }
   const coche= [];
 
@@ -24,6 +22,27 @@ class Coches {
   coche.push(new Coches("alfa romeo","18.340$",2023,"tonale","Negro","Nuevo"));
   coche.push(new Coches("fiat","14.500$",2022,"b-suv","Blanco","Nuevo"));
 
+
+
+
+
+
+  let entrada = prompt("1)Consultar coches disponibles 2)Descripcion Coche  3)Simular cuota ESC para salir" );
+
+  while (entrada != "ESC") {
+    switch (entrada) {
+      case "1":
+     
+   coche.forEach((item) => {
+    alert("Marca: " + item.marca + '  ' +
+     "Modelo: " + item.modelo + '  ' +
+       "Costo: " + item.precio);
+  });
+        break;
+
+
+      case "2":
+      
   let nombre = prompt("Ingrese la marca o modelo del coche a consultar").toLowerCase();
 
 
@@ -55,3 +74,31 @@ class Coches {
   
     nombre = prompt("Ingrese la marca o modelo del coche a consultar").toLowerCase();
   }
+
+
+        break;
+      case "3":
+      
+
+
+      
+         break;
+      default:
+        alert("Opción invalida");
+        break;
+    }
+    entrada = prompt("1)Consultar coches disponibles 2)Descripcion Coche  3)Simular cuota ESC para salir");
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
