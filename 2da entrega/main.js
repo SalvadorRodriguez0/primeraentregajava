@@ -14,13 +14,13 @@ class Coches {
   }
   const coche= [];
 
-  coche.push(new Coches("ford","3500$",1978,"f150","granate","Usado"));
-  coche.push(new Coches("volkswagen","2899$",1998,"golf","Rojo","Usado"));
-  coche.push(new Coches("peugeot","3280$",2004,"147","Amarillo","Usado"));
-  coche.push(new Coches("nissan","23.400$",2023,"ariya","Negro","Nuevo"));
-  coche.push(new Coches("toyota","33.999$",2022,"bz4x","Blanco","Nuevo"));
-  coche.push(new Coches("alfa romeo","18.340$",2023,"tonale","Negro","Nuevo"));
-  coche.push(new Coches("fiat","14.500$",2022,"b-suv","Blanco","Nuevo"));
+  coche.push(new Coches("ford",3500,1978,"f150","granate","Usado"));
+  coche.push(new Coches("volkswagen",2899,1998,"golf","Rojo","Usado"));
+  coche.push(new Coches("peugeot",3280,2004,"147","Amarillo","Usado"));
+  coche.push(new Coches("nissan",23.400,2023,"ariya","Negro","Nuevo"));
+  coche.push(new Coches("toyota",33.999,2022,"bz4x","Blanco","Nuevo"));
+  coche.push(new Coches("alfa romeo",18.340,2023,"tonale","Negro","Nuevo"));
+  coche.push(new Coches("fiat",14.500,2022,"b-suv","Blanco","Nuevo"));
 
 
 
@@ -36,7 +36,7 @@ class Coches {
    coche.forEach((item) => {
     alert("Marca: " + item.marca + '  ' +
      "Modelo: " + item.modelo + '  ' +
-       "Costo: " + item.precio);
+       "Costo: " + (item.precio + "$" )) ;
   });
         break;
 
@@ -60,7 +60,7 @@ class Coches {
     if (coches) {
       let mensaje = `
         Marca: ${coches.marca}
-        Precio: ${coches.precio}
+        Precio: ${coches.precio + "$"} 
         año: ${coches.año}
         modelo: ${coches.modelo}
         color: ${coches.color}
@@ -83,11 +83,11 @@ class Coches {
         };
        
         coche.forEach((item) => {
-      const z= item.precio;
+         
           alert("Marca: " + item.marca + '  ' +
            "Modelo: " + item.modelo + '  ' +
-             "Costo Total: " + item.precio + '  ' +
-             "Costo en 6 cuotas: " + (cuota(z,6)) );
+             "Costo Total: " + item.precio + "$"  + '  ' +
+             "Costo en 6 cuotas: " + cuota(item.precio,6) + "$" );
              
         });
     
