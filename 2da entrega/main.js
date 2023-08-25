@@ -16,7 +16,7 @@ class Coches {
 
   coche.push(new Coches("ford","3500$",1978,"f150","granate","Usado"));
   coche.push(new Coches("volkswagen","2899$",1998,"golf","Rojo","Usado"));
-  coche.push(new Coches("alfa romeo","3280$",2004,"147","Amarillo","Usado"));
+  coche.push(new Coches("peugeot","3280$",2004,"147","Amarillo","Usado"));
   coche.push(new Coches("nissan","23.400$",2023,"ariya","Negro","Nuevo"));
   coche.push(new Coches("toyota","33.999$",2022,"bz4x","Blanco","Nuevo"));
   coche.push(new Coches("alfa romeo","18.340$",2023,"tonale","Negro","Nuevo"));
@@ -27,7 +27,7 @@ class Coches {
 
 
 
-  let entrada = prompt("1)Consultar coches disponibles 2)Descripcion Coche  3)Simular cuota ESC para salir" );
+  let entrada = prompt("1)Consultar coches disponibles 2)Descripcion Coche  3)Simular cuota , ESC para salir" );
 
   while (entrada != "ESC") {
     switch (entrada) {
@@ -78,16 +78,27 @@ class Coches {
 
         break;
       case "3":
-      
-
-
-      
+        const cuota = (a, b) => {
+          return a / b;
+        };
+       
+        coche.forEach((item) => {
+      const z= item.precio;
+          alert("Marca: " + item.marca + '  ' +
+           "Modelo: " + item.modelo + '  ' +
+             "Costo Total: " + item.precio + '  ' +
+             "Costo en 6 cuotas: " + (cuota(z,6)) );
+             
+        });
+    
          break;
+
+
       default:
         alert("Opción invalida");
         break;
     }
-    entrada = prompt("1)Consultar coches disponibles 2)Descripcion Coche  3)Simular cuota ESC para salir");
+    entrada = prompt("1)Consultar coches disponibles 2)Descripcion Coche  3)Simular cuota , ESC para salir");
   }
 
 
